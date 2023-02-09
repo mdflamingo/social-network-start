@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(requests):
-    return HttpResponse('Это главная страница')
+def index(request):
+    template = 'posts/index.html'
+    return render(request, template)
 
 def group_posts(requests):
     return HttpResponse('Список всех публикаций')
