@@ -20,11 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = 'h(!eey#r6t=p8e!3t2bm-g4#e!h_*g#--rrhgmo-tc$!!v5zo1'
-=======
-SECRET_KEY = 'hg*b!iw!i*gjp09w-*(1=&t&94r&t1eakd*dk#x#ol+1pu8-l3'
->>>>>>> origin/HEAD
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -35,10 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
     'posts.apps.PostsConfig',
-=======
->>>>>>> origin/HEAD
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +55,7 @@ ROOT_URLCONF = 'yatube.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
