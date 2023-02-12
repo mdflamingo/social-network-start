@@ -1,13 +1,24 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.shortcuts import render
+
 
 def index(request):
     template = 'posts/index.html'
-    return render(request, template)
+    title = 'Это главная страница проекта Yatube'
+    context = {
+        'title': title,
+        'text': 'Главная страница'
+    }
+    return render(request, template, context)
 
-def group_posts(requests):
-    return HttpResponse('Список всех публикаций')
+def group_posts(request):
+    template = 'posts/group_list.html'
+    title = 'Здесь будет информация о группах проекта Yatube'
+    context = {
+        'title': title,
+        'text': 'Группы проекта'
+    }
+    return render (request, template, context)
 
-def post_detail(requests, post_id):
-    return HttpResponse('Страница с одним постом {post_id}')
+def post_detail(request, post_id):
+    return render(f'kjdh{post_id}')
+
