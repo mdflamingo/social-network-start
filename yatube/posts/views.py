@@ -20,6 +20,3 @@ def group_posts(request, slug):
     }
     return render(request, template, context) 
 
-def post_detail(request, post_id):
-    return render(f'kjdh{post_id}')
-
